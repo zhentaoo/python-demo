@@ -9,9 +9,13 @@ conn = pymysql.connect(
     db='xxx',  # 数据库名
     charset='utf8'  # 设置了数据库的字符集
 )
+# 生成git的用户名 邮箱配置文件
 
 mycursor = conn.cursor()
 mycursor.execute("SELECT * FROM eco_bpm_file LIMIT 1")
 result = mycursor.fetchone()
 print(result)
+
+
+
 
